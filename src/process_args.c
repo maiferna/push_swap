@@ -81,10 +81,7 @@ t_stack	*process_two_args(char *argv)
 	if (!(check_args(args)))
 	{
 		while (args[i])
-		{
-			free(args[i]);
-			i++;
-		}
+			free(args[i++]);
 		free(args);
 		print_error();
 	}
