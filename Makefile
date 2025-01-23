@@ -25,6 +25,7 @@ MY_SOURCE = ./src/main.c \
 	./src/utils/ft_split.c \
 	./src/utils/utils_more.c \
 	./src/utils/utils.c \
+	./src/sort_small.c \
 
 OBJ := $(MY_SOURCE:%.c=%.o)
 
