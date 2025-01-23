@@ -17,8 +17,12 @@ void	sort(t_stack **stack_a, t_stack **stack_b)
 	int	len;
 
 	len = ft_lstsize(*stack_a);
-	if (len == 3)
+	if (len == 2)
+		sort_two(stack_a);
+	else if (len == 3)
 		sort_three(stack_a);
+	else if (len == 4)
+		sort_four(stack_a, stack_b);
 	else if (len == 5)
 		sort_five(stack_a, stack_b);
 	else if (len > 5)
