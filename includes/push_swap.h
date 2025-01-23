@@ -75,8 +75,12 @@ void	rrr(t_stack **stack_a, t_stack **stack_b);
 void	reverse_rotate_both(t_stack **a, t_stack **b, t_stack *cheapest_node);
 
 // SORT
+	//SORT TWO
+void	sort_two(t_stack **stack_a);
 	// SORT THREE
 void	sort_three(t_stack **stack_a);
+	// SORT FOUR
+void	sort_four(t_stack **stack_a, t_stack **stack_b);
 	// SORT FIVE
 void	sort_five(t_stack **stack_a, t_stack **stack_b);
 	// SORT MORE THAN FIVE
