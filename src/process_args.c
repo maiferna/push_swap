@@ -82,35 +82,9 @@ t_stack	*process_two_args(char *argv)
 	{
 		while (args[i])
 		{
-			free(args[i]); // Libera cada cadena individualmente.
+			free(args[i]);
 			i++;
 		}
-		free(args); // Libera el array principal.
-		print_error(); // Sale con un error.
-	}
-	while (args[i])
-	{
-		num = ft_atol(args[i]); // Convierte la cadena a número.
-		add_to_stack(&a, num);  // Agrega el número a la pila.
-		free(args[i]);          // Libera la cadena después de usarla.
-		i++;
-	}
-	free(args); // Libera el array principal después de usarlo.
-	return (a);
-}
-
-/* t_stack	*process_two_args(char *argv)
-{
-	t_stack	*a;
-	int		i;
-	int		num;
-	char	**args;
-
-	a = NULL;
-	i = 0;
-	args = ft_split(argv, ' ');
-	if (!(check_args(args)))
-	{
 		free(args);
 		print_error();
 	}
@@ -118,11 +92,12 @@ t_stack	*process_two_args(char *argv)
 	{
 		num = ft_atol(args[i]);
 		add_to_stack(&a, num);
+		free(args[i]);
 		i++;
 	}
 	free(args);
 	return (a);
-} */
+}
 
 t_stack	*process_args(int argc, char **argv)
 {
