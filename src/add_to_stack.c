@@ -24,6 +24,7 @@ void	add_to_stack(t_stack **stack, int num)
 		print_error();
 	new_node->value = num;
 	new_node->next = NULL;
+	new_node->cheapest = false;
 	if (*stack == NULL)
 		*stack = new_node;
 	else
