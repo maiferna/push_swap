@@ -116,6 +116,7 @@ t_stack	*process_args(int argc, char **argv)
 		{
 			num = ft_atol(argv[i]);
 			add_to_stack(&a, num);
+			free(argv[i]);
 			i++;
 		}
 	}
